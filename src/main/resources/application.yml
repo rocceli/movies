@@ -1,0 +1,30 @@
+# MongoDB configuration
+spring:
+  config:
+    activate:
+      on-profile: "en"
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/movies
+
+
+# Logging configuration
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: INFO
+        type: INFO
+      springframework:
+        security: INFO
+  config: classpath:log4j2-spring.xml
+  
+# Server configuration
+server:
+  port: 3001
+
+web:
+  server:
+    port: 3001
+    protocol: http
+    domain: localhost
